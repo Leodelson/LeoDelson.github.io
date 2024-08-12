@@ -3569,7 +3569,7 @@ input, select, textarea {
 				transform: translateY(4rem);
 				opacity: 0;
 			}
-
+			
 		@media screen and (max-width: 980px) {
 
 			#intro {
