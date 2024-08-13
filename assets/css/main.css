@@ -3982,8 +3982,6 @@ body, html {
 	color: blue;
 }
 
-
-
 	#main {
 		background-color: #ffffff;
 		position: relative;
@@ -4120,6 +4118,11 @@ body, html {
 					padding: 2.5rem;
 					width: 50%;
 				}
+				.name {
+					font-size: 24px;
+					font-weight: bold;
+				}
+				
 
 			}
 
