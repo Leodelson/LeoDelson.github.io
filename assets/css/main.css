@@ -3978,7 +3978,7 @@ body, html {
 /* New CSS for the "READ MORE..." link */
 #read-more {
     position: relative;
-    top: -33px; /* Adjust this value to move the "READ MORE..." link up */
+    top: -32px; /* Adjust this value to move the "READ MORE..." link up */
 	color: blue;
 }
 
