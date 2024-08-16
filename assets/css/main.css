@@ -3888,6 +3888,7 @@ input, select, textarea {
         display: block; /* Make each menu item a block element */
         margin: 10px 0; /* Add some margin to separate the items */
     }
+	  
 }
 
 @media screen and (max-width: 980px) {
