@@ -12,8 +12,119 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		
+		<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+		<style>
+.project-skills {
+    text-align: center; /* centers the skills line */
+    margin: 15px 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.project-skills strong {
+    margin-right: 5px; /* space after "Skills:" */
+}
+
+
+.project-skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers the skills horizontally */
+    gap: 10px;
+}
+
+
+.project-skills li {
+	background-color: #f0f0f0;
+	color: #0571e4;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 0.9rem;
+}
+
+.typing-bar {
+    position: relative;
+    width: 100%;
+    background-color: #eef1f3;
+    color: rgb(20, 2, 2);
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    /* Fix bouncing */
+    display: flex;
+    align-items: center;      /* vertically center text */
+    justify-content: center;  /* horizontally center text */
+    height: 3em;              /* fixed height to prevent bounce */
+}
+
+/* Icon background */
+.icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so they don’t block text */
+}
+
+.icon-bg i {
+    position: absolute;
+    color: rgba(136, 2, 2, 0.2); /* subtle */
+    font-size: 2rem;
+    animation: floatIcons 15s linear infinite;
+}
+
+/* Random positions for each icon */
+.icon-bg i:nth-child(1) { left: 10%; animation-delay: 0s; }
+.icon-bg i:nth-child(2) { left: 30%; animation-delay: 3s; }
+.icon-bg i:nth-child(3) { left: 50%; animation-delay: 6s; }
+.icon-bg i:nth-child(4) { left: 70%; animation-delay: 9s; }
+.icon-bg i:nth-child(5) { left: 90%; animation-delay: 12s; }
+
+/* Floating animation */
+@keyframes floatIcons {
+    0% { transform: translateY(100%); opacity: 0; }
+    10% { opacity: 0.2; }
+    50% { opacity: 0.3; }
+    90% { opacity: 0.2; }
+    100% { transform: translateY(-120%); opacity: 0; }
+}
+
+/* Responsive text size */
+@media screen and (max-width: 768px) {
+    .typing-bar { font-size: 1rem; padding: 12px 8px; height: 3em; }
+    .icon-bg i { font-size: 1.5rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .typing-bar { font-size: 0.9rem; padding: 10px 5px; height: 3em; }
+    .icon-bg i { font-size: 1.2rem; }
+}
+</style>
 
 	</head>
+
+	<!-- Top Typing Bar with Background Icons -->
+<div class="typing-bar">
+  <div class="icon-bg">
+    <i class="fa-solid fa-chart-line"></i>
+    <i class="fa-solid fa-database"></i>
+    <i class="fa-solid fa-chart-pie"></i>
+    <i class="fa-solid fa-laptop-code"></i>
+    <i class="fa-solid fa-table"></i>
+  </div>
+  <span id="typed-text"></span>
+</div>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -60,7 +171,7 @@
 				<!-- Main -->
 				<div id="main">
 					<div class="about-info">
-						<img src="images/Leonard.jpg" alt="Your Photo" class="about-photo">
+						<img src="images/IMG_6282.jpg" alt="Your Photo" class="about-photo">
 						<div class="about-text">
 							<h1>How I Became a Data Analyst</h1>
 							<div class="project-date">April 19, 2024</div>
@@ -74,22 +185,45 @@
 					</div>
 				
 						<!-- Featured Post -->
-							<article class="post featured">
-								
-								<header class="major">
-									<div class="project-date">September 8, 2024</div>
-									<h2><a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis.">Leo's Job Commuting and Living Cost Analysis.<br />
-									</a></h2>
-									<p>I’m excited to share my latest Power BI dashboard: "Leo's Job Commuting and Living Cost Analysis". This project analyzes and compares the costs of commuting and living in different locations, helping me make informed decisions on the best place to live while optimizing my work-life balance. 
-										This dashboard is a great example of how data analysis can be applied to everyday decisions, and I’m thrilled to showcase my skills in this area.<br />
-									<br />
-									</p>
-								</header>
-								<a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis." class="image main"><img src="images/Job Commuting Dashboard Analysis.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis." class="button large">View Project</a></li>
-								</ul>
-							</article> 
+<article class="post featured">
+	
+	<header class="major">
+		<div class="project-date">September 8, 2024</div>
+		<h2>
+			<a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis.">
+				Leo's Job Commuting and Living Cost Analysis.
+			</a>
+		</h2>
+		<p>
+			I’m excited to share my latest Power BI dashboard: "Leo's Job Commuting and Living Cost Analysis". 
+			This project analyzes and compares the costs of commuting and living in different locations, helping me make informed decisions on the best place to live while optimizing my work-life balance. 
+			This dashboard is a great example of how data analysis can be applied to everyday decisions, and I’m thrilled to showcase my skills in this area.
+		</p>
+	</header>
+	
+	<a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis." class="image main">
+		<img src="images/Job Commuting Dashboard Analysis.png" alt="" />
+	</a>
+
+	<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Top Skills:</strong>
+		<ul>
+			<li>Attention to Detail</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Problem-solving skills</li>
+			<li>Strong Communication</li>
+		</ul>
+	</div>
+
+	<ul class="actions special">
+		<li>
+			<a href="https://github.com/Leodelson/Leo-s-Job-Commuting-and-Living-Cost-Analysis." class="button large">View Project</a>
+		</li>
+	</ul>
+</article>
+
 
 
 <article class="post featured">
@@ -103,6 +237,18 @@
 									</p>
 								</header>
 								<a href="https://github.com/Leodelson/Financial-Risk-Assessment-Analysis" class="image main"><img src="images/financial risk .png" alt="" /></a>
+
+									<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Presentation Skills</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 								<ul class="actions special">
 									<li><a href="https://github.com/Leodelson/Financial-Risk-Assessment-Analysis" class="button large">View Financial Risk Project</a></li>
 								</ul>
@@ -120,6 +266,18 @@
 									</p>
 								</header>
 								<a href="https://github.com/Leodelson/Global-Health-Statistics-" class="image main"><img src="images/Global Health Stats.png" alt="" /></a>
+							
+								<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Presentation Skills</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 								<ul class="actions special">
 									<li><a href="https://github.com/Leodelson/Global-Health-Statistics-" class="button large">View Global Health Statistics Project</a></li>
 								</ul>
@@ -137,6 +295,18 @@
 									</p>
 								</header>
 								<a href="https://github.com/Leodelson/Car-Sales-Analysis-" class="image main"><img src="images/New-Car-Sales-Dashboard.png" alt="" /></a>
+
+									<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Problem-solving skills</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 								<ul class="actions special">
 									<li><a href="https://github.com/Leodelson/Car-Sales-Analysis-" class="button large">View Car Sales Project</a></li>
 								</ul>
@@ -148,6 +318,18 @@
 								</a></h2>
 							</header>
 							<a href="https://github.com/Leodelson/Most-Trending-Box-Office-Movies-2000-2024-Revenue-Insights/tree/main" class="image fit"><img src="images/Box Office Movies Revenue.png" alt="" /></a>
+
+								<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Problem-solving skills</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 							<p>This dashboard provides in-depth insights into the revenue performance of the most trending movies from 2000 to 2024. With a focus on box office data across multiple countries, it visualizes key trends, total earnings, and performance metrics of top-grossing films worldwide. Dive into the detailed breakdown of how movies have performed globally, with a special emphasis on the revenue generated in different markets, highlighting the impact of international audiences on box office success.</p>
 							<ul class="actions special">
 								<li><a href="https://github.com/Leodelson/Most-Trending-Box-Office-Movies-2000-2024-Revenue-Insights/tree/main" class="button">View Project</a></li>
@@ -164,6 +346,18 @@
 									</p>
 								</header>
 								<a href="https://github.com/Leodelson/Bike-Sales-Project/blob/main/README.md" class="image main"><img src="images/Bike Sales Analysis .png" alt="" /></a>
+
+								<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Problem-solving skills</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Excel</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 								<ul class="actions special">
 									<li><a href="https://github.com/Leodelson/Bike-Sales-Project/blob/main/README.md" class="button large">View Bike Sales Project</a></li>
 								</ul>
@@ -178,6 +372,18 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/Leodelson/Top-11-US-Trending-YouTube-Videos-2017-2018/blob/main/README.md" class="image fit"><img src="images/Youtubestreamer.png" alt="" /></a>
+
+										<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Problem-solving skills</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 									<p>Top 11 Trending US YouTube Videos Dashboard provides an in-depth analysis of the top 11 trending YouTube videos in the United States from 2017-2018. This data reveals significant trends in viewer engagement, including likes, comments, and views, across popular channels and videos during this period.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Leodelson/Top-11-US-Trending-YouTube-Videos-2017-2018/blob/main/README.md" class="button">View Youtube Streamer Project</a></li>
@@ -191,6 +397,18 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/Leodelson/GlobalTerrorismAnalysis" class="image fit"><img src="images/New Terrorism.png" alt="" /></a>
+
+										<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Problem-solving skills</li>
+			<li>Attention to Detail</li>
+		</ul>
+	</div>
 									<p>Global Terrorism Dashboard provides an in-depth analysis of terrorist attacks worldwide. The data reveals significant fluctuations in the number of terrorist attacks over the years, with a noticeable increase in the early 2000s, peaking around 2014, and followed by a decline. This analysis highlights the most affected regions, types of attacks and weapons used, casualties, attack locations, and trends over time.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Leodelson/GlobalTerrorismAnalysis" class="button">View Global Terrorism Project.</a></li>
@@ -204,6 +422,18 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/Leodelson/Most-Trending-Box-Office-Movies-2000-2024-Revenue-Insights/tree/main" class="image fit"><img src="images/Box Office Movies Revenue.png" alt="" /></a>
+
+										<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Attention to Detail</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 									<p>This dashboard provides in-depth insights into the revenue performance of the most trending movies from 2000 to 2024. With a focus on box office data across multiple countries, it visualizes key trends, total earnings, and performance metrics of top-grossing films worldwide. Dive into the detailed breakdown of how movies have performed globally, with a special emphasis on the revenue generated in different markets, highlighting the impact of international audiences on box office success.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Leodelson/Most-Trending-Box-Office-Movies-2000-2024-Revenue-Insights/tree/main" class="button">View Project</a></li>
@@ -217,6 +447,19 @@
 										</a></h2>
 									</header>
 									<a href="https://www.theforage.com/simulations/accenture-nam/data-analytics-mmlb" class="image fit"><img src="images/My Accenture Completion Certificate.png" alt="" /></a>
+
+										<!-- Skills Section -->
+	<div class="project-skills">
+		<strong>Skills:</strong>
+		<ul>
+			<li>Case Study</li>
+			<li>Power BI</li>
+			<li>Data Visualization</li>
+			<li>Data Analysis</li>
+			<li>Collaboration & Research</li>
+			<li>Business Intelligence</li>
+		</ul>
+	</div>
 									<p>Completed a simulation/Internship focused on advising a hypothetical social media client as a Data Analyst at Accenture.
 										Cleaned, modelled and analyzed 7 datasets to uncover insights into content trends to inform strategic decisions.
 										Prepared a PowerPoint deck and video presentation to communicate key insights for the client and internal stakeholders.</p>
@@ -349,10 +592,53 @@
 				<div id="copyright">
 					<ul>
 						<li>&copy; 2024 Leo's Portfolio All Rights Reserved</li>
-						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const messages = [
+        "Helping YOU Break into Data with Great Decisions and Meaningful Insights",
+        "Turning Raw Data into Clear Reports and Meaningful Visualizations",
+        "Power BI, Excel, SQL, and Data Analytics Expertise Ready for Your Team",
+        "Helping Organizations Make Data-Driven Decisions with Confidence",
+        "Transforming Complex Data into Strategic Opportunities for Growth",
+        "Bringing Accuracy, Efficiency, and Insight to Every Project I Tackle"
+    ];
+
+    let messageIndex = 0;
+    let charIndex = 0;
+    const typingSpeed = 70;
+    const eraseSpeed = 30;
+    const delayBetween = 2000;
+
+    function typeMessage() {
+        const currentMessage = messages[messageIndex];
+        if (charIndex < currentMessage.length) {
+            document.getElementById("typed-text").innerHTML += currentMessage.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeMessage, typingSpeed);
+        } else {
+            setTimeout(eraseMessage, delayBetween);
+        }
+    }
+
+    function eraseMessage() {
+        const currentMessage = messages[messageIndex];
+        if (charIndex > 0) {
+            document.getElementById("typed-text").innerHTML = currentMessage.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseMessage, eraseSpeed);
+        } else {
+            messageIndex = (messageIndex + 1) % messages.length;
+            setTimeout(typeMessage, 500);
+        }
+    }
+
+    typeMessage();
+});
+</script>
 			
 		</body>
 		</html>
